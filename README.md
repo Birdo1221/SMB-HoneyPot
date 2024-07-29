@@ -14,8 +14,7 @@ I am currently using this myself, [ AbuseipDB Results ](https://www.abuseipdb.co
 
 
   ### Example of the log file in action 
-   
-![Example](https://github.com/user-attachments/assets/000ff986-2d39-4748-9d48-07d4eeb26f69)
+![image](https://github.com/user-attachments/assets/f0cc7367-d557-4ff5-92ab-f63a73ec1f5f)
 
 
 
