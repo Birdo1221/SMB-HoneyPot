@@ -1,18 +1,8 @@
-# SSH Honeypot
-  ### Example of the log file in action 
-![image](https://github.com/user-attachments/assets/f0cc7367-d557-4ff5-92ab-f63a73ec1f5f)
+# SMB Honeypot
 
-
-This repository contains three [3] variants of an SSH honeypot. The script is designed to capture login attempts for exact credentaisl used + reporting the IP addresses to AbuseIPDB. 
+The script is designed to capture login / connection attempts for the SMB port 445 , this tries to exact the credentaisl used + reports the IP addresses to AbuseIPDB. 
 
 I am currently using this myself, [ AbuseipDB Results ](https://www.abuseipdb.com/user/137416) .
-
-## Variants
- **SSH-Honeypot-All:**   This has both Geolocation and Logging.
- 
- **SSH-Honeypot-NoGeo:**   This just collects the Username:Password used and the IP of the actor.
- 
- **SSH-Honeypot-Clean:**   This only runs in the background to detect and report. 
 
 ## Getting Started
 ### Prerequisites
@@ -43,7 +33,7 @@ I am currently using this myself, [ AbuseipDB Results ](https://www.abuseipdb.co
 
 ### 1. Just need to run the file
 
-**Run:** `Python3 ssh-honeypot-All.py`
+**Run:** `Python3 smb.py`
 
 ### 2. Running the logging varients will create the log file
 **File:** `smb_attempts.log`
