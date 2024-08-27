@@ -7,7 +7,7 @@ import time
 import logging
 from concurrent.futures import ThreadPoolExecutor
 
-ABUSE_IPDB_API_KEY = ''
+ABUSE_IPDB_API_KEY = 'Add API key here'
 SMB_PORT = 445
 
 reported_ips = {}
