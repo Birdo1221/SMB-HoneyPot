@@ -47,7 +47,8 @@ I am currently using this myself, [ AbuseipDB Results ](https://www.abuseipdb.co
 
 ### 3. Editing the Config 
 Make sure you edit the config in the smbv2.py file to your needs / liking
-**eg:** `   config = {
+**eg:**  ``` 
+config = {
                 "abuse_ipdb_api_key": "d2hhdHVsb29raW5hdA== random strings will be your abuse_ipdb api key. ",
                 "smb_port": 445,
                 "log_file": "smb_honeypot.log",
@@ -56,6 +57,7 @@ Make sure you edit the config in the smbv2.py file to your needs / liking
                 "max_workers": 10,
                 "connection_timeout": 3,
                 "whitelist": ["127.0.0.1"]
-            }`
+            }
+           ```
 
 
