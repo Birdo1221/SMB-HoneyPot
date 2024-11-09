@@ -47,7 +47,7 @@ I am currently using this myself, [ AbuseipDB Results ](https://www.abuseipdb.co
 
 ### 3. Editing the Config 
 Make sure you edit the config in the smbv2.py file to your needs / liking
-**eg:**  ``` 
+**eg:**  ```bash
 config = {
                 "abuse_ipdb_api_key": "d2hhdHVsb29raW5hdA== random strings will be your abuse_ipdb api key. ",
                 "smb_port": 445,
