@@ -38,8 +38,9 @@ I am currently using this myself, [ AbuseipDB Results ](https://www.abuseipdb.co
 ## Usage
 
 ### 1. Just need to run the file
+** Latest Version 
 
-**Run:** `Python3 smb.py`
+**Run:** `Python3 smbV2.py`
 
 ### 2. Running the logging varients will create the log file
 **File:** `smb_attempts.log`
