@@ -10,7 +10,7 @@ I am currently using this myself, [ AbuseipDB Results ](https://www.abuseipdb.co
 - Paramiko library
 - Requests library
 - Curl
-- iptables  ==> Linux Only, Will need to find a Windows Alternative
+- iptables  ==> Linux Only, Will need to find a Windows Alternative if you intend on running on windows for endpoints / with open ports
 
 
   ### Example of the log file in action 
@@ -38,11 +38,24 @@ I am currently using this myself, [ AbuseipDB Results ](https://www.abuseipdb.co
 ## Usage
 
 ### 1. Just need to run the file
-** Latest Version 
 
+## Latest Version 
 **Run:** `Python3 smbV2.py`
 
 ### 2. Running the logging varients will create the log file
-**File:** `smb_attempts.log`
+**File:** `smb_honeypot.log`
 
-   You can change the name of the log file to whatever.
+### 3. Editing the Config 
+Make sure you edit the config in the smbv2.py file to your needs / liking
+**eg:** `   config = {
+                "abuse_ipdb_api_key": "d2hhdHVsb29raW5hdA== random strings will be your abuse_ipdb api key. ",
+                "smb_port": 445,
+                "log_file": "smb_honeypot.log",
+                "reporting_interval_minutes": 15,
+                "ban_duration_minutes": 30,
+                "max_workers": 10,
+                "connection_timeout": 3,
+                "whitelist": ["127.0.0.1"]
+            }`
+
+
