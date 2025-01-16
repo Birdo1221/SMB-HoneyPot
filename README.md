@@ -1,65 +1,62 @@
 # SMB Honeypot
 
-The script is designed to capture login / connection attempts for the SMB port 445 , this tries to exact the credentaisl used + reports the IP addresses to AbuseIPDB. 
+This script captures login and connection attempts to SMB port 445 and optionally reports the IP addresses to AbuseIPDB. It also logs these attempts in a separate `/logs/` directory, e.g., `smb_attempts_20250116.log`.
 
-I am currently using this myself, [ AbuseipDB Results ](https://www.abuseipdb.com/user/137416) .
+## Features
+- **IP Reporting**: Optional integration with [AbuseIPDB](https://www.abuseipdb.com/) for reporting malicious IP addresses.
+- **Logging**: Detailed logs of all login/connection attempts.
+- **Open-source Example**: See my AbuseIPDB reports [here](https://www.abuseipdb.com/user/137416).
+
+---
 
 ## Getting Started
+
 ### Prerequisites
-- Python 3.x
-- Paramiko library
-- Requests library
-- Curl
-- iptables  ==> Linux Only, Will need to find a Windows Alternative if you intend on running on windows for endpoints / with open ports
+- **Python 3.x**
+- **Linux or WSL**: Requires `iptables` (not recommended on WSL due to compatibility issues). A Windows alternative must be used for Windows endpoints.
 
+### AbuseIPDB Integration
+You can make public reports via AbuseIPDB, but note that anonymous submissions cannot be tracked or deleted and may be perceived as less legitimate.
 
-  ### Example of the log file in action 
-![image](https://github.com/user-attachments/assets/f0cc7367-d557-4ff5-92ab-f63a73ec1f5f)
+![AbuseIPDB Example](https://github.com/user-attachments/assets/f0cc7367-d557-4ff5-92ab-f63a73ec1f5f)
 
+---
 
+## Installation
 
-### Installation
-
-1. Clone the repository:
-    ```sh
+1. **Clone the Repository**:
+    ```bash
     git clone https://github.com/Birdo1221/SMB-HoneyPot.git
-    cd SMB-honeypot
+    cd SMB-HoneyPot
     ```
 
-2. Install the required Python packages:
-    ```sh
-    pip install paramiko requests
+2. **Install Required Packages**:
+    ```bash
+    pip install requests ipaddress
     ```
 
-3. Replace the placeholder in the script with your Abuse-IPDB API key:
+3. **Configure AbuseIPDB**:
+    Replace the placeholder in the script with your AbuseIPDB API key:
     ```python
-    ABUSE_IPDB_API_KEY = 'Replace with Abuse-IPDB API Token'
+    ABUSE_IPDB_API_KEY = 'Replace with your AbuseIPDB API Token'
     ```
+
+---
+
 ## Usage
 
-### 1. Just need to run the file
+1. **Run the Script**:
+    ```bash
+    python3 smbV2.py
+    ```
 
-## Latest Version 
-**Run:** `Python3 smbV2.py`
+2. **Enable Logging**:
+    The script will create log files like `smb_attempts_20250116.log` in the `/logs/` directory.
 
-### 2. Running the logging varients will create the log file
-**File:** `smb_honeypot.log`
+3. **Edit Configurations**:
+    Customize the script as needed, including your AbuseIPDB API key. To get an API key, visit the API tab [AbuseIPDB API](https://www.abuseipdb.com/) after logging in.
 
-### 3. Editing the Config 
-Make sure you edit the config in the smbv2.py file to your needs / liking
-eg: 
+---
 
- ```sh
-config = {
-                "abuse_ipdb_api_key": "d2hhdHVsb29raW5hdA== random strings will be your abuse_ipdb api key. ",
-                "smb_port": 445,
-                "log_file": "smb_honeypot.log",
-                "reporting_interval_minutes": 15,
-                "ban_duration_minutes": 30,
-                "max_workers": 10,
-                "connection_timeout": 3,
-                "whitelist": ["127.0.0.1"]
-            }
- ```
-
-
+## Latest Version
+Ensure you are using the latest version of the script for optimal performance and security.
