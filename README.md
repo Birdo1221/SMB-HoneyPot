@@ -59,4 +59,3 @@ You can make public reports via AbuseIPDB, but note that anonymous submissions c
 ---
 
 ## Latest Version
-Ensure you are using the latest version of the script for optimal performance and security.
