@@ -40,7 +40,17 @@ You can make public reports via AbuseIPDB, but note that anonymous submissions c
     ```python
     ABUSE_IPDB_API_KEY = 'Replace with your AbuseIPDB API Token'
     ```
-
+    If you having issue killing the processing or by using CTRL + Z or C, i would recommend using these commands instead,
+       
+    # Check what's using port 445
+   ```sudo netstat -tulpn | grep 445```
+    
+    # Kill the process using port 445 (replace PID with the number you see from above command)
+    ```sudo kill PID```
+    
+    # Or more aggressively if needed:
+    ```sudo kill -9 PID```
+   
 ---
 
 ## Usage
