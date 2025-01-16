@@ -47,7 +47,7 @@ You can make public reports via AbuseIPDB, but note that anonymous submissions c
 
 1. **Run the Script**:
     ```bash
-    python3 smbV2.py
+    screen python3 main.py
     ```
 
 2. **Enable Logging**:
