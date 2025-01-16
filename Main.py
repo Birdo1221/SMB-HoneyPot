@@ -14,7 +14,7 @@ import sys
 
 class SMBHoneypot:
     def __init__(self, port: int = 445, ban_duration: int = 30):
-        self.ABUSE_IPDB_API_KEY = '0fd14aa5aeb7e102968a8348fd601d861b858d80a1c38bc907042df7c9e24befc076823cebf9a6a0'
+        self.ABUSE_IPDB_API_KEY = 'Random API strings I gave an example previously'
         self.SMB_PORT = port
         self.BAN_DURATION = ban_duration  # minutes
         self.reported_ips: Dict[str, datetime] = {}
